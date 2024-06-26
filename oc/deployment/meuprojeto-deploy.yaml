@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meuprojeto-deployment
+  labels:
+    app: meuprojeto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meuprojeto
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 2
+  template:
+    metadata:
+      labels:
+        app: meuprojeto
+    spec:
+      containers:
+        - name: 'meuprojeto'
+          image: 'meuprojeto:1'
+          lifecycle:
+            postStart:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 10 && php artisan key:generate && php artisan migrate && php artisan optimize:clear && php artisan optimize"]
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: meuprojeto-secret
+            - configMapRef:
+                name: meuprojeto-config
