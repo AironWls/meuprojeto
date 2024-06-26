@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/fb94613391.js" crossorigin="anonymous"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <base href="{{ url()->current() }}">
-    <title>{{ env('APP_NAME') }}</title>
+    <title>{{ config('app.name') }}</title>
 </head>
 <body>
     <header>
