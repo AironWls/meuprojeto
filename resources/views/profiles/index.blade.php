@@ -41,7 +41,7 @@
                             </td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Ações">
-                                    {{-- <a href="{{ route('profiles.add_role_to_profile', $item->id) }}" title="Adicionar Role ao perfil" type="button" class="btn btn-dark rounded-0"><i class="fa-solid fa-gear"></i></a> --}}
+                                    <a href="{{ route('profiles.add_role_to_profile', $item->id) }}" title="Adicionar Role ao perfil" type="button" class="btn btn-dark rounded-0"><i class="fa-solid fa-gear"></i></a>
                                     <a href="{{ route('profiles.show', $item->id) }}" title="Visualizar perfil" type="button" class="btn btn-info rounded-0"><i class="fa-solid fa-eye"></i></a>
                                     <a href="{{ route('profiles.edit', $item->id) }}" title="Editar perfil" type="button" class="btn btn-secondary rounded-0"><i class="fa-solid fa-edit"></i></a>
                                     <button data-button-delete title="Excluir perfil" type="button" class="btn btn-danger rounded-0"><i class="fa-solid fa-trash"></i></button>

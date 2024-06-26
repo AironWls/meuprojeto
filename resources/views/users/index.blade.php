@@ -49,7 +49,7 @@
                             </td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="Ações">
-                                    {{-- <a href="{{ route('users.add_profile_to_user', $item->id) }}" title="Adicionar perfil ao usuário" type="button" class="btn btn-dark rounded-0"><i class="fa-solid fa-id-badge"></i></a> --}}
+                                    <a href="{{ route('users.add_profile_to_user', $item->id) }}" title="Adicionar perfil ao usuário" type="button" class="btn btn-dark rounded-0"><i class="fa-solid fa-id-badge"></i></a>
                                     <a href="{{ route('users.show', $item->id) }}" title="Visualizar usuário" type="button" class="btn btn-info rounded-0"><i class="fa-solid fa-eye"></i></a>
                                     <a href="{{ route('users.edit', $item->id) }}" title="Editar usuário" type="button" class="btn btn-secondary rounded-0"><i class="fa-solid fa-edit"></i></a>
                                     <button data-button-delete title="Excluir usuário" type="button" class="btn btn-danger rounded-0"><i class="fa-solid fa-trash"></i></button>
