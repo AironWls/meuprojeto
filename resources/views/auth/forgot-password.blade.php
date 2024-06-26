@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('templates.subviews.validation')
+@include('templates.subviews.validations')
 
 <div class="container">
     <div class="card rounded-0">
